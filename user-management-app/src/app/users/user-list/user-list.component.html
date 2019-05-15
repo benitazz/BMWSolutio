@@ -1,0 +1,26 @@
+  <h4 class="mt-2">Users</h4>
+
+  <div class="card mt-2">
+    <div class="card-body">
+      <div class="dashedborder">
+        <button type="button" 
+                class="addbutton" 
+                (click)="addNewUser()">Add New User
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header pr-0 pb-0">
+      <h5 class="card-title">All users</h5>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li *ngFor="let user of users" 
+             class="list-group-item">
+          <app-user-item [user]="user"></app-user-item>
+        </li>
+      </ul>
+    </div>
+  </div>

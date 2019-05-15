@@ -1,0 +1,81 @@
+<div class="form-gap"></div>
+
+<div class="panel panel-default d-flex justify-content-center">
+  <div class="panel-body background-theme user-screen">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          <br />
+           <h2 class="text-center">Create New Account</h2>
+        </div>
+
+        <hr />
+
+        <form #registrationForm="ngForm" (ngSubmit)="register(registrationForm.value)">
+          <div class="form-group">
+            <label for="inputFirstName">First name</label>
+            <input type="text" 
+                   ngModel 
+                   name="firstname" 
+                   class="form-control" 
+                   id="inputFirstName"
+                   required>
+            <inline-message [message]="formErrors.firstname"></inline-message>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName">Last name</label>
+            <input type="text" 
+                   class="form-control"
+                   id="inputLastName"
+                   name="lastname" 
+                   ngModel
+                   required>
+             <inline-message [message]="formErrors.lastname"></inline-message>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" 
+                   class="form-control" 
+                   id="inputEmail" 
+                   aria-describedby="emailHelp"
+                   placeholder="Enter email" 
+                   name="email" 
+                   ngModel
+                   required
+                   emailValidator>
+               <inline-message [message]="formErrors.inputEmail"></inline-message>
+              <small id="emailHelp" 
+                     class="form-text text-muted">We'll never share your email with anyone else.
+              </small>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" 
+                   class="form-control" 
+                   id="inputPassword" 
+                   placeholder="Password" 
+                   name="password"
+                   ngModel>
+            <small id="emailHelp" 
+                  class="form-text text-muted">Password (6 or more characters).</small>
+          </div>
+
+          <div class="form-group">
+            <label for="inputConfirmPassword">Confirm password</label>
+            <input type="password" 
+                   class="form-control" 
+                   id="inputConfirmPassword"
+                   placeholder="Password">
+          </div>
+
+          <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">
+              Create new user
+            </button>
+          </div>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

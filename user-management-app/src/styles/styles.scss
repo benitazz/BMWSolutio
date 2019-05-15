@@ -1,0 +1,102 @@
+@import 'style-set.scss';
+@import 'mixins.scss';
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+}
+
+.alert-danger {
+  color: #E30613;
+  background-color: #FCE6E7;
+  border-color: #F49BA1;
+}
+
+.alert-danger-inline {
+  color: #E30613;
+  padding-left: 0px !important;
+}
+
+.alert {
+  padding: 10px;
+  margin: 0 0 5px 0;
+}
+
+.background-theme {
+  background: white;
+  border: 1px solid #345578;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form-gap {
+  padding-top: 50px;
+}
+
+button[disabled=disabled],
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed !important;
+}
+
+.user-screen {
+  width: 430px;
+}
+
+.card {
+  border: none;
+  background-color: $primaryItemColor;
+  margin-bottom: 15px;
+  padding-bottom: 1px;
+  @include box-shadow(2px, 2px, 2px, $shadowColor);
+}
+
+.content-panel-no-shadow {
+  border: none;
+  background-color: $primaryItemColor;
+  margin-bottom: 10px;
+  padding-bottom: 1px;
+}
+
+.dropdown-toggle::after {
+  border: none !important;
+}
+
+.list-group-item {
+  border-left: none !important;
+  border-right: none !important;
+  padding-bottom: 0.4rem !important;
+  padding-left: 1rem !important;
+  padding-top: 0.4rem !important;
+}
+
+.list-group-item:first-child {
+  border-top: none !important;
+}
+
+.hand-pointer {
+  cursor: pointer;
+}
+
+.open>.dropdown-toggle.btn-default.focus,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover {
+  background-color: white;
+}
+
+
+button.addbutton {
+  @include button-style($controlPrimaryColor,
+    $secondaryTextColor,
+    transparent, capitalize);
+  height: 60px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.dashedborder {
+  border: 1px dashed;
+  border-radius: 0px;
+  border-color: $defaultControlBorder;
+  margin: 15px;
+}

@@ -1,0 +1,15 @@
+  <div class="media">
+    <i class="fa fa-user fa-3x pr-2" aria-hidden="true"></i>
+    <div class="media-body">
+      <h6 class="media-head">{{user?.username}}</h6>
+
+      <div class="row">
+        <span class="col-sm-7">{{user?.firstname}} {{user?.lastname}}</span>
+
+        <div class="col-sm-5">
+          <label class="col-md-8 col-form-label pt-0">{{user?.birthdate | date:'fullDate'}}</label>
+          <a class="col-md-2 pt-0 btn btn-link" routerLink="details">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
